@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "ecom-toon-project"
+version = "0.1.0"
+description = "JSON to TOON converter for eCommerce"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "ecom_toon"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.12.5"
+pydantic = ">=2.12.5,<3.0.0"
+"dataclasses-json" = ">=0.6.7,<0.7.0"
+rich = "^14.3.2"
+ijson = "^3.4.0.post0"
+rich-click = "<2"
+tiktoken = "^0.12.0"
+
+[tool.poetry.scripts]
+ecom-toon = "cli.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+ruff = ">=0.14.7,<0.15.0"
+mypy = ">=1.19.0,<2.0.0"
+pre-commit = ">=4.5.0,<5.0.0"
+pytest-snapshot = "^0.9"
+rich = {extras = ["pytest"], version = "^14.3.2"}

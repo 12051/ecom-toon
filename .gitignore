@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Output files (generated — don't commit these)
+output/
+*.toon
+*.toon.gz
+*.json.gz
+toon-report.csv
+
+# VS Code extension build artifacts
+vscode-extension/ecom-toon/node_modules/
+vscode-extension/ecom-toon/out/
+vscode-extension/ecom-toon/*.vsix
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log

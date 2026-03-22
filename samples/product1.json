@@ -1,0 +1,30 @@
+{
+  "id": 12345,
+  "title": "Blue Cotton T-Shirt",
+  "body_html": "A soft blue cotton T-shirt.",
+  "handle": "blue-cotton-tshirt",
+  "vendor": "Example Brand",
+  "tags": ["tshirt", "blue", "cotton"],
+  "variants": [
+    {
+      "id": 67890,
+      "sku": "T123-BLUE-M",
+      "price": "29.99",
+      "currency": "USD",
+      "inventory_quantity": 50
+    },
+    {
+      "id": 67891,
+      "sku": "T123-RED-M",
+      "price": "29.99",
+      "currency": "USD",
+      "inventory_quantity": 50
+    }
+  ],
+  "images": [
+    {
+      "src": "https://example.com/tshirt-blue.jpg",
+      "alt": "Blue T-Shirt Front View"
+    }
+  ]
+}
