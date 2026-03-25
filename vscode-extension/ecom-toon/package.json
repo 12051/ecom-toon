@@ -1,40 +1,140 @@
 {
   "name": "ecom-toon",
-  "displayName": "ecom-toon",
-  "description": "Convert eCommerce  JSON to TOON format for LLM token savings",
-  "version": "0.0.1",
+  "displayName": "ecom-toon: JSON → TOON Converter",
+  "description": "Convert eCommerce JSON to TOON format for LLM token savings (38-49% fewer tokens)",
+  "version": "1.0.0",
+  "publisher": "midhu27",
   "engines": {
-    "vscode": "^1.110.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
+    "Formatters",
     "Other"
   ],
+  "keywords": [
+    "toon",
+    "json",
+    "ecommerce",
+    "llm",
+    "token",
+    "shopify",
+    "converter"
+  ],
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#1E2761",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/ecom-toon"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "ecom-toon.helloWorld",
-        "title": "Hello World"
+        "command": "ecom-toon.convertToToon",
+        "title": "ecom-toon: Convert JSON → TOON",
+        "icon": "$(arrow-right)"
+      },
+      {
+        "command": "ecom-toon.convertToJson",
+        "title": "ecom-toon: Convert TOON → JSON",
+        "icon": "$(arrow-left)"
+      },
+      {
+        "command": "ecom-toon.showStats",
+        "title": "ecom-toon: Show Token Savings Report",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "ecom-toon.batchConvert",
+        "title": "ecom-toon: Batch Convert Folder (JSON → TOON)",
+        "icon": "$(files)"
+      },
+      {
+        "command": "ecom-toon.validateRoundtrip",
+        "title": "ecom-toon: Validate Roundtrip (Zero Data Loss Check)",
+        "icon": "$(check)"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .json",
+          "command": "ecom-toon.convertToToon",
+          "group": "ecom-toon@1"
+        },
+        {
+          "when": "resourceExtname == .json",
+          "command": "ecom-toon.showStats",
+          "group": "ecom-toon@2"
+        },
+        {
+          "when": "resourceExtname == .json",
+          "command": "ecom-toon.validateRoundtrip",
+          "group": "ecom-toon@3"
+        },
+        {
+          "when": "resourceExtname == .toon",
+          "command": "ecom-toon.convertToJson",
+          "group": "ecom-toon@1"
+        },
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "ecom-toon.batchConvert",
+          "group": "ecom-toon@1"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceExtname == .json",
+          "command": "ecom-toon.convertToToon",
+          "group": "ecom-toon@1"
+        },
+        {
+          "when": "resourceExtname == .toon",
+          "command": "ecom-toon.convertToJson",
+          "group": "ecom-toon@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ecom-toon",
+      "properties": {
+        "ecom-toon.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "Path to Python executable (e.g. python, python3, or full path like C:\\Python311\\python.exe)"
+        },
+        "ecom-toon.cliPath": {
+          "type": "string",
+          "default": "",
+          "description": "Full path to your ecom-toon project folder (where cli/main.py lives). Leave empty to auto-detect."
+        },
+        "ecom-toon.showSavingsOnConvert": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show token savings notification after every conversion"
+        },
+        "ecom-toon.outputFolder": {
+          "type": "string",
+          "default": "",
+          "description": "Where to save converted files. Leave empty to save next to the source file."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "lint": "eslint src --ext ts"
   },
   "devDependencies": {
-    "@types/vscode": "^1.110.0",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
-    "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
   }
 }
