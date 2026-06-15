@@ -79,9 +79,10 @@ def _escape(value: Any) -> str:
     if isinstance(value, float):
         return str(value)
     s = str(value)
-    # Timestamps: replace colons with commas (kept unquoted — _unescape detects by pattern)
+    # Timestamps: keep colons as-is (no comma replacement needed)
+    # The datetime pattern in _unescape detects and returns it unchanged
     if re.match(r'^\d{4}-\d{2}-\d{2}T', s):
-        return re.sub(r':', ',', s)
+        return s  # return unchanged — no commas introduced
     # URLs: use ~/ so no comma is introduced into the encoded value
     if s.startswith("https://"):
         return "https~/" + s[len("https://"):]
@@ -100,7 +101,7 @@ def _escape(value: Any) -> str:
 
 def _unescape(value: str) -> Any:
     """Decode a TOON scalar back to its Python type."""
-    v = value.strip()
+    v = value  # do NOT strip — spaces may be part of the actual value
 
     # Quoted string -> strip outer quotes and unescape inner \\"
     if len(v) >= 2 and v[0] == chr(34) and v[-1] == chr(34):
@@ -113,9 +114,9 @@ def _unescape(value: str) -> Any:
     if v.startswith("http~/"):
         return "http://" + v[len("http~/"):]
 
-    # Timestamps: restore commas back to colons
-    if re.match(r"^\d{4}-\d{2}-\d{2}T", v):
-        return re.sub(r",", ":", v)
+    # Timestamps: detect ISO datetime pattern and return as string
+    if re.match(r'^\d{4}-\d{2}-\d{2}T[\d:]+Z$', v):
+        return v  # already correct, no transformation needed
 
     if v.lower() == "true":
         return True
@@ -224,7 +225,8 @@ def _parse_block(lines: List[str], start: int,
             i += 1
             continue
 
-        line = raw.strip()
+        line     = raw.strip()   # for pattern matching
+        line_raw = raw.lstrip()   # for value extraction (preserves trailing spaces)
 
         # Uniform object array: key[N]{f1,f2,...},
         m = re.match(r'^(\w+)\[(\d+)\]\{([^}]*)\},\s*$', line)
@@ -239,7 +241,7 @@ def _parse_block(lines: List[str], start: int,
                     i += 1
                 if i >= len(lines):
                     break
-                row_line   = lines[i].strip()
+                row_line   = lines[i].lstrip()
                 raw_values = _split_csv(row_line, len(fields))
                 item = {
                     fields[j]: _unescape(raw_values[j])
@@ -266,7 +268,7 @@ def _parse_block(lines: List[str], start: int,
         if m3:
             key      = m3.group(1)
             vals_str = m3.group(3)
-            vals     = [_unescape(v.strip())
+            vals     = [_unescape(v)
                         for v in vals_str.split(",") if v.strip()]
             result[key] = vals
             i += 1
@@ -282,8 +284,8 @@ def _parse_block(lines: List[str], start: int,
             continue
 
         # Simple key,value
-        if "," in line:
-            key, _, rest = line.partition(",")
+        if "," in line_raw:
+            key, _, rest = line_raw.partition(",")
             result[key.strip()] = _unescape(rest)
             i += 1
             continue
@@ -367,7 +369,7 @@ def compress_toon_gzip(toon_text: str, output_file: Path) -> None:
     data       = toon_text.encode("utf-8")
     compressed = gzip.compress(data)
     output_file.write_bytes(compressed)
-    print(f"✅ Compressed {len(data)}B → {len(compressed)}B ({output_file})")
+    print(f"[OK] Compressed {len(data)}B -> {len(compressed)}B ({output_file})")
 
 
 def decompress_gzip_to_toon(gzip_file: Path) -> str:
@@ -378,7 +380,7 @@ def compress_json_gzip(json_data: dict, output_file: Path) -> None:
     data       = json.dumps(json_data).encode("utf-8")
     compressed = gzip.compress(data)
     output_file.write_bytes(compressed)
-    print(f"✅ Compressed JSON → {output_file}")
+    print(f"[OK] Compressed JSON -> {output_file}")
 
 
 # ---------------------------------------------------------------------------
@@ -391,7 +393,7 @@ def do_toon_to_json(input_file: Path, output_file: Path) -> None:
     output_file.write_text(
         json.dumps(json_data, indent=2, ensure_ascii=False),
         encoding="utf-8")
-    print(f"✅ Converted {input_file} → {output_file}")
+    print(f"[OK] Converted {input_file} -> {output_file}")
 
 
 def validate_roundtrip(json_file: Path) -> None:
@@ -401,9 +403,9 @@ def validate_roundtrip(json_file: Path) -> None:
     orig = json.dumps(data,      sort_keys=True, ensure_ascii=False)
     rt   = json.dumps(roundtrip, sort_keys=True, ensure_ascii=False)
     if orig == rt:
-        print("✅ Roundtrip: PASS")
+        print("[OK] Roundtrip: PASS")
     else:
-        print("❌ Roundtrip: FAIL")
+        print("[FAIL] Roundtrip: FAIL")
         for a, b in zip(orig.split(","), rt.split(",")):
             if a != b:
                 print(f"  Expected: {a}")

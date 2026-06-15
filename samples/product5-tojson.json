@@ -1,0 +1,969 @@
+{
+  "store": {
+    "id": "shop_001",
+    "name": "TechGear Pro",
+    "domain": "techgearpro.myshopify.com",
+    "currency": "USD",
+    "timezone": "America/New_York"
+  },
+  "products": [
+    {
+      "id": 100000001,
+      "title": "Sony WH-1000XM5 Wireless Noise Canceling Headphones - Matte Black",
+      "handle": "sony-wh-1000xm5-matte-black",
+      "vendor": "Sony Electronics",
+      "product_type": "Headphones",
+      "status": "active",
+      "created_at": "2026-01-01T10:00:00Z",
+      "updated_at": "2026-02-20T09:15:00Z",
+      "published_at": "2026-01-02T08:00:00Z",
+      "description": "Industry-leading noise cancellation with superior sound quality and 30-hour battery life.",
+      "body_html": "<p>Premium wireless noise cancelling headphones with LDAC support.</p>",
+      "tags": [
+        "headphones",
+        "wireless",
+        "noise-canceling",
+        "sony",
+        "premium",
+        "bluetooth",
+        "over-ear",
+        "audiophile"
+      ],
+      "collections": [
+        {
+          "id": 1001,
+          "title": "Premium Audio",
+          "handle": "premium-audio",
+          "description": "High-end audio equipment"
+        },
+        {
+          "id": 1002,
+          "title": "Wireless Headphones",
+          "handle": "wireless-headphones",
+          "description": "All wireless headphones"
+        }
+      ],
+      "pricing": {
+        "price_min": "349.00",
+        "price_max": "399.00",
+        "compare_at_price": "449.00",
+        "currency": "USD",
+        "taxable": true,
+        "discounts": [
+          {
+            "id": "DISC10",
+            "type": "percentage",
+            "value": 10,
+            "description": "10% launch discount",
+            "valid_until": "2026-04-01"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 111000001,
+          "title": "Matte Black / Standard",
+          "sku": "WH1000XM5-BLK-STD",
+          "price": "349.00",
+          "inventory_quantity": 42,
+          "barcode": "1234567890101",
+          "weight": 0.55,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000002,
+          "title": "Silver / Standard",
+          "sku": "WH1000XM5-SLV-STD",
+          "price": "349.00",
+          "inventory_quantity": 28,
+          "barcode": "1234567890102",
+          "weight": 0.55,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000003,
+          "title": "Midnight Blue / Standard",
+          "sku": "WH1000XM5-BLU-STD",
+          "price": "399.00",
+          "inventory_quantity": 15,
+          "barcode": "1234567890103",
+          "weight": 0.56,
+          "weight_unit": "lb"
+        }
+      ],
+      "inventory_locations": [
+        {
+          "location_id": "WH-A",
+          "name": "Warehouse A",
+          "country": "USA",
+          "quantity": 42
+        },
+        {
+          "location_id": "WH-B",
+          "name": "Warehouse B",
+          "country": "USA",
+          "quantity": 28
+        },
+        {
+          "location_id": "STORE-NYC",
+          "name": "NYC Flagship",
+          "country": "USA",
+          "quantity": 15
+        }
+      ],
+      "shipping_details": {
+        "requires_shipping": true,
+        "weight": 250,
+        "weight_unit": "g",
+        "dimensions": {
+          "length": 22,
+          "width": 18,
+          "height": 8,
+          "unit": "cm"
+        },
+        "shipping_methods": [
+          {
+            "method": "Standard Shipping",
+            "estimated_days": "5-7",
+            "cost": "9.99"
+          },
+          {
+            "method": "Express Shipping",
+            "estimated_days": "1-2",
+            "cost": "19.99"
+          }
+        ]
+      },
+      "media": [
+        {
+          "id": 201000001,
+          "type": "image",
+          "alt": "Front View",
+          "url": "https://cdn.shopify.com/images/sony-xm5-front.jpg"
+        },
+        {
+          "id": 201000002,
+          "type": "image",
+          "alt": "Side View",
+          "url": "https://cdn.shopify.com/images/sony-xm5-side.jpg"
+        },
+        {
+          "id": 201000003,
+          "type": "video",
+          "alt": "Product Demo",
+          "url": "https://cdn.shopify.com/videos/sony-xm5-demo.mp4"
+        }
+      ],
+      "seo": {
+        "title": "Sony WH-1000XM5 Wireless Headphones",
+        "description": "Buy Sony WH-1000XM5 with 30-hour battery life and industry-leading noise cancellation.",
+        "keywords": [
+          "sony headphones",
+          "noise cancelling",
+          "bluetooth headphones",
+          "wh1000xm5"
+        ]
+      },
+      "reviews": [
+        {
+          "review_id": 5001,
+          "customer_name": "Emily Johnson",
+          "rating": 5,
+          "title": "Best headphones ever",
+          "comment": "Noise cancellation is incredible!",
+          "date": "2026-02-10"
+        },
+        {
+          "review_id": 5002,
+          "customer_name": "Michael Chen",
+          "rating": 4,
+          "title": "Great sound quality",
+          "comment": "Very comfortable but a bit expensive.",
+          "date": "2026-02-12"
+        },
+        {
+          "review_id": 5003,
+          "customer_name": "Sarah Williams",
+          "rating": 5,
+          "title": "Worth every penny",
+          "comment": "Best ANC headphones on the market.",
+          "date": "2026-02-15"
+        }
+      ],
+      "analytics": {
+        "views_last_30_days": 15230,
+        "purchases_last_30_days": 824,
+        "conversion_rate": 5.4,
+        "wishlist_count": 1120
+      },
+      "compliance": {
+        "certifications": [
+          "FCC",
+          "CE",
+          "RoHS"
+        ],
+        "battery_safety": "UN38.3 certified",
+        "recycling_program": true
+      }
+    },
+    {
+      "id": 100000002,
+      "title": "Apple AirPods Pro 2nd Generation with MagSafe Case",
+      "handle": "apple-airpods-pro-2nd-gen-magsafe",
+      "vendor": "Apple",
+      "product_type": "Earbuds",
+      "status": "active",
+      "created_at": "2026-01-05T10:00:00Z",
+      "updated_at": "2026-02-18T11:00:00Z",
+      "published_at": "2026-01-06T08:00:00Z",
+      "description": "Active noise cancellation for immersive sound. Adaptive transparency lets you hear the world.",
+      "body_html": "<p>AirPods Pro with H2 chip for incredible sound and noise cancellation.</p>",
+      "tags": [
+        "earbuds",
+        "wireless",
+        "apple",
+        "noise-canceling",
+        "airpods",
+        "bluetooth",
+        "in-ear",
+        "premium"
+      ],
+      "collections": [
+        {
+          "id": 1002,
+          "title": "Wireless Headphones",
+          "handle": "wireless-headphones",
+          "description": "All wireless headphones"
+        },
+        {
+          "id": 1003,
+          "title": "Apple Products",
+          "handle": "apple-products",
+          "description": "Official Apple accessories"
+        }
+      ],
+      "pricing": {
+        "price_min": "249.00",
+        "price_max": "249.00",
+        "compare_at_price": "279.00",
+        "currency": "USD",
+        "taxable": true,
+        "discounts": [
+          {
+            "id": "SAVE30",
+            "type": "fixed",
+            "value": 30,
+            "description": "$30 off launch price",
+            "valid_until": "2026-03-15"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 111000004,
+          "title": "White / MagSafe",
+          "sku": "APP2-WHT-MAG",
+          "price": "249.00",
+          "inventory_quantity": 85,
+          "barcode": "1940000000001",
+          "weight": 0.13,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000005,
+          "title": "White / Lightning",
+          "sku": "APP2-WHT-LTG",
+          "price": "229.00",
+          "inventory_quantity": 34,
+          "barcode": "1940000000002",
+          "weight": 0.13,
+          "weight_unit": "lb"
+        }
+      ],
+      "inventory_locations": [
+        {
+          "location_id": "WH-A",
+          "name": "Warehouse A",
+          "country": "USA",
+          "quantity": 60
+        },
+        {
+          "location_id": "WH-B",
+          "name": "Warehouse B",
+          "country": "USA",
+          "quantity": 40
+        },
+        {
+          "location_id": "STORE-NYC",
+          "name": "NYC Flagship",
+          "country": "USA",
+          "quantity": 19
+        }
+      ],
+      "shipping_details": {
+        "requires_shipping": true,
+        "weight": 56,
+        "weight_unit": "g",
+        "dimensions": {
+          "length": 6,
+          "width": 5,
+          "height": 4,
+          "unit": "cm"
+        },
+        "shipping_methods": [
+          {
+            "method": "Standard Shipping",
+            "estimated_days": "5-7",
+            "cost": "0.00"
+          },
+          {
+            "method": "Express Shipping",
+            "estimated_days": "1-2",
+            "cost": "14.99"
+          }
+        ]
+      },
+      "media": [
+        {
+          "id": 201000004,
+          "type": "image",
+          "alt": "Front View",
+          "url": "https://cdn.shopify.com/images/airpods-pro2-front.jpg"
+        },
+        {
+          "id": 201000005,
+          "type": "image",
+          "alt": "Case Open",
+          "url": "https://cdn.shopify.com/images/airpods-pro2-case.jpg"
+        },
+        {
+          "id": 201000006,
+          "type": "image",
+          "alt": "In Ear",
+          "url": "https://cdn.shopify.com/images/airpods-pro2-wear.jpg"
+        }
+      ],
+      "seo": {
+        "title": "Apple AirPods Pro 2nd Gen",
+        "description": "Shop Apple AirPods Pro 2nd generation with active noise cancellation and MagSafe charging.",
+        "keywords": [
+          "airpods pro",
+          "apple earbuds",
+          "noise cancelling earbuds",
+          "magsafe"
+        ]
+      },
+      "reviews": [
+        {
+          "review_id": 5004,
+          "customer_name": "James Park",
+          "rating": 5,
+          "title": "Perfect for iPhone users",
+          "comment": "Seamless integration with my iPhone and MacBook.",
+          "date": "2026-02-08"
+        },
+        {
+          "review_id": 5005,
+          "customer_name": "Lisa Thompson",
+          "rating": 4,
+          "title": "Great ANC",
+          "comment": "Noise cancellation is top notch. Fit could be better.",
+          "date": "2026-02-11"
+        }
+      ],
+      "analytics": {
+        "views_last_30_days": 22100,
+        "purchases_last_30_days": 1340,
+        "conversion_rate": 6.1,
+        "wishlist_count": 2050
+      },
+      "compliance": {
+        "certifications": [
+          "FCC",
+          "CE",
+          "RoHS"
+        ],
+        "battery_safety": "UN38.3 certified",
+        "recycling_program": true
+      }
+    },
+    {
+      "id": 100000003,
+      "title": "Samsung Galaxy Buds2 Pro True Wireless Earbuds",
+      "handle": "samsung-galaxy-buds2-pro",
+      "vendor": "Samsung",
+      "product_type": "Earbuds",
+      "status": "active",
+      "created_at": "2026-01-08T10:00:00Z",
+      "updated_at": "2026-02-19T14:00:00Z",
+      "published_at": "2026-01-09T08:00:00Z",
+      "description": "Intelligent ANC with 360 Audio for immersive, theater-like sound.",
+      "body_html": "<p>Galaxy Buds2 Pro with 24-bit Hi-Fi audio and intelligent ANC.</p>",
+      "tags": [
+        "earbuds",
+        "wireless",
+        "samsung",
+        "noise-canceling",
+        "galaxy",
+        "bluetooth",
+        "in-ear"
+      ],
+      "collections": [
+        {
+          "id": 1002,
+          "title": "Wireless Headphones",
+          "handle": "wireless-headphones",
+          "description": "All wireless headphones"
+        },
+        {
+          "id": 1004,
+          "title": "Samsung Products",
+          "handle": "samsung-products",
+          "description": "Official Samsung accessories"
+        }
+      ],
+      "pricing": {
+        "price_min": "179.00",
+        "price_max": "179.00",
+        "compare_at_price": "229.00",
+        "currency": "USD",
+        "taxable": true,
+        "discounts": [
+          {
+            "id": "SAVE50",
+            "type": "fixed",
+            "value": 50,
+            "description": "$50 limited discount",
+            "valid_until": "2026-03-31"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 111000006,
+          "title": "Bora Purple",
+          "sku": "GBP2-PUR",
+          "price": "179.00",
+          "inventory_quantity": 55,
+          "barcode": "1940000000003",
+          "weight": 0.12,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000007,
+          "title": "Graphite",
+          "sku": "GBP2-GRA",
+          "price": "179.00",
+          "inventory_quantity": 48,
+          "barcode": "1940000000004",
+          "weight": 0.12,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000008,
+          "title": "White",
+          "sku": "GBP2-WHT",
+          "price": "179.00",
+          "inventory_quantity": 37,
+          "barcode": "1940000000005",
+          "weight": 0.12,
+          "weight_unit": "lb"
+        }
+      ],
+      "inventory_locations": [
+        {
+          "location_id": "WH-A",
+          "name": "Warehouse A",
+          "country": "USA",
+          "quantity": 70
+        },
+        {
+          "location_id": "WH-B",
+          "name": "Warehouse B",
+          "country": "USA",
+          "quantity": 50
+        },
+        {
+          "location_id": "STORE-NYC",
+          "name": "NYC Flagship",
+          "country": "USA",
+          "quantity": 20
+        }
+      ],
+      "shipping_details": {
+        "requires_shipping": true,
+        "weight": 61,
+        "weight_unit": "g",
+        "dimensions": {
+          "length": 7,
+          "width": 5,
+          "height": 4,
+          "unit": "cm"
+        },
+        "shipping_methods": [
+          {
+            "method": "Standard Shipping",
+            "estimated_days": "5-7",
+            "cost": "0.00"
+          },
+          {
+            "method": "Express Shipping",
+            "estimated_days": "1-2",
+            "cost": "14.99"
+          }
+        ]
+      },
+      "media": [
+        {
+          "id": 201000007,
+          "type": "image",
+          "alt": "Front View",
+          "url": "https://cdn.shopify.com/images/galaxy-buds2-pro-purple.jpg"
+        },
+        {
+          "id": 201000008,
+          "type": "image",
+          "alt": "Case",
+          "url": "https://cdn.shopify.com/images/galaxy-buds2-pro-case.jpg"
+        },
+        {
+          "id": 201000009,
+          "type": "video",
+          "alt": "Product Demo",
+          "url": "https://cdn.shopify.com/videos/galaxy-buds2-pro-demo.mp4"
+        }
+      ],
+      "seo": {
+        "title": "Samsung Galaxy Buds2 Pro Wireless Earbuds",
+        "description": "Shop Samsung Galaxy Buds2 Pro with intelligent ANC and 24-bit Hi-Fi audio.",
+        "keywords": [
+          "galaxy buds",
+          "samsung earbuds",
+          "noise cancelling earbuds",
+          "buds2 pro"
+        ]
+      },
+      "reviews": [
+        {
+          "review_id": 5006,
+          "customer_name": "David Kim",
+          "rating": 5,
+          "title": "Best Samsung buds yet",
+          "comment": "360 audio is a game changer for movies.",
+          "date": "2026-02-09"
+        },
+        {
+          "review_id": 5007,
+          "customer_name": "Anna Rodriguez",
+          "rating": 4,
+          "title": "Great for Android",
+          "comment": "Works perfectly with my Galaxy S24.",
+          "date": "2026-02-13"
+        },
+        {
+          "review_id": 5008,
+          "customer_name": "Tom Wilson",
+          "rating": 3,
+          "title": "Good but not perfect",
+          "comment": "ANC is good, but battery life could be better.",
+          "date": "2026-02-16"
+        }
+      ],
+      "analytics": {
+        "views_last_30_days": 9800,
+        "purchases_last_30_days": 520,
+        "conversion_rate": 5.3,
+        "wishlist_count": 780
+      },
+      "compliance": {
+        "certifications": [
+          "FCC",
+          "CE",
+          "RoHS"
+        ],
+        "battery_safety": "UN38.3 certified",
+        "recycling_program": true
+      }
+    },
+    {
+      "id": 100000004,
+      "title": "Bose QuietComfort 45 Wireless Bluetooth Headphones",
+      "handle": "bose-quietcomfort-45-wireless",
+      "vendor": "Bose",
+      "product_type": "Headphones",
+      "status": "active",
+      "created_at": "2026-01-10T10:00:00Z",
+      "updated_at": "2026-02-17T12:00:00Z",
+      "published_at": "2026-01-11T08:00:00Z",
+      "description": "Acclaimed noise cancellation technology with high-fidelity audio and 24-hour battery.",
+      "body_html": "<p>QC45 headphones with proprietary TriPort acoustic architecture.</p>",
+      "tags": [
+        "headphones",
+        "wireless",
+        "bose",
+        "noise-canceling",
+        "premium",
+        "bluetooth",
+        "over-ear"
+      ],
+      "collections": [
+        {
+          "id": 1001,
+          "title": "Premium Audio",
+          "handle": "premium-audio",
+          "description": "High-end audio equipment"
+        },
+        {
+          "id": 1002,
+          "title": "Wireless Headphones",
+          "handle": "wireless-headphones",
+          "description": "All wireless headphones"
+        }
+      ],
+      "pricing": {
+        "price_min": "279.00",
+        "price_max": "279.00",
+        "compare_at_price": "329.00",
+        "currency": "USD",
+        "taxable": true,
+        "discounts": [
+          {
+            "id": "SAVE50B",
+            "type": "fixed",
+            "value": 50,
+            "description": "$50 seasonal discount",
+            "valid_until": "2026-05-01"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 111000009,
+          "title": "White Smoke",
+          "sku": "QC45-WHT",
+          "price": "279.00",
+          "inventory_quantity": 33,
+          "barcode": "1940000000006",
+          "weight": 0.51,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000010,
+          "title": "Triple Black",
+          "sku": "QC45-BLK",
+          "price": "279.00",
+          "inventory_quantity": 29,
+          "barcode": "1940000000007",
+          "weight": 0.51,
+          "weight_unit": "lb"
+        }
+      ],
+      "inventory_locations": [
+        {
+          "location_id": "WH-A",
+          "name": "Warehouse A",
+          "country": "USA",
+          "quantity": 35
+        },
+        {
+          "location_id": "WH-B",
+          "name": "Warehouse B",
+          "country": "USA",
+          "quantity": 20
+        },
+        {
+          "location_id": "STORE-NYC",
+          "name": "NYC Flagship",
+          "country": "USA",
+          "quantity": 7
+        }
+      ],
+      "shipping_details": {
+        "requires_shipping": true,
+        "weight": 238,
+        "weight_unit": "g",
+        "dimensions": {
+          "length": 20,
+          "width": 17,
+          "height": 8,
+          "unit": "cm"
+        },
+        "shipping_methods": [
+          {
+            "method": "Standard Shipping",
+            "estimated_days": "5-7",
+            "cost": "9.99"
+          },
+          {
+            "method": "Express Shipping",
+            "estimated_days": "1-2",
+            "cost": "19.99"
+          }
+        ]
+      },
+      "media": [
+        {
+          "id": 201000010,
+          "type": "image",
+          "alt": "Front View",
+          "url": "https://cdn.shopify.com/images/bose-qc45-white.jpg"
+        },
+        {
+          "id": 201000011,
+          "type": "image",
+          "alt": "Side View",
+          "url": "https://cdn.shopify.com/images/bose-qc45-side.jpg"
+        },
+        {
+          "id": 201000012,
+          "type": "image",
+          "alt": "Folded",
+          "url": "https://cdn.shopify.com/images/bose-qc45-folded.jpg"
+        }
+      ],
+      "seo": {
+        "title": "Bose QuietComfort 45 Wireless Headphones",
+        "description": "Shop Bose QC45 with world-class noise cancellation and 24-hour battery life.",
+        "keywords": [
+          "bose headphones",
+          "quietcomfort",
+          "noise cancelling headphones",
+          "qc45"
+        ]
+      },
+      "reviews": [
+        {
+          "review_id": 5009,
+          "customer_name": "Rachel Green",
+          "rating": 5,
+          "title": "Classic Bose quality",
+          "comment": "Incredibly comfortable for all-day wear.",
+          "date": "2026-02-07"
+        },
+        {
+          "review_id": 5010,
+          "customer_name": "Chris Martin",
+          "rating": 4,
+          "title": "Solid noise cancellation",
+          "comment": "ANC is great. Sound is balanced and clear.",
+          "date": "2026-02-14"
+        }
+      ],
+      "analytics": {
+        "views_last_30_days": 11400,
+        "purchases_last_30_days": 690,
+        "conversion_rate": 6.0,
+        "wishlist_count": 930
+      },
+      "compliance": {
+        "certifications": [
+          "FCC",
+          "CE",
+          "RoHS"
+        ],
+        "battery_safety": "UN38.3 certified",
+        "recycling_program": true
+      }
+    },
+    {
+      "id": 100000005,
+      "title": "Jabra Evolve2 85 Professional Wireless Headset",
+      "handle": "jabra-evolve2-85-wireless-headset",
+      "vendor": "Jabra",
+      "product_type": "Headsets",
+      "status": "active",
+      "created_at": "2026-01-12T10:00:00Z",
+      "updated_at": "2026-02-16T15:00:00Z",
+      "published_at": "2026-01-13T08:00:00Z",
+      "description": "Professional-grade headset with industry-leading 8-microphone call technology.",
+      "body_html": "<p>Evolve2 85 headset engineered for focus and professional calls.</p>",
+      "tags": [
+        "headset",
+        "wireless",
+        "jabra",
+        "professional",
+        "office",
+        "bluetooth",
+        "over-ear",
+        "uc-certified"
+      ],
+      "collections": [
+        {
+          "id": 1001,
+          "title": "Premium Audio",
+          "handle": "premium-audio",
+          "description": "High-end audio equipment"
+        },
+        {
+          "id": 1005,
+          "title": "Professional Headsets",
+          "handle": "professional-headsets",
+          "description": "Office and business headsets"
+        }
+      ],
+      "pricing": {
+        "price_min": "379.00",
+        "price_max": "419.00",
+        "compare_at_price": "479.00",
+        "currency": "USD",
+        "taxable": true,
+        "discounts": [
+          {
+            "id": "BIZDISC",
+            "type": "percentage",
+            "value": 15,
+            "description": "15% business discount",
+            "valid_until": "2026-06-30"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 111000011,
+          "title": "Black / USB-A",
+          "sku": "EV285-BLK-A",
+          "price": "379.00",
+          "inventory_quantity": 22,
+          "barcode": "1940000000008",
+          "weight": 0.68,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000012,
+          "title": "Black / USB-C",
+          "sku": "EV285-BLK-C",
+          "price": "379.00",
+          "inventory_quantity": 18,
+          "barcode": "1940000000009",
+          "weight": 0.68,
+          "weight_unit": "lb"
+        },
+        {
+          "id": 111000013,
+          "title": "Beige / USB-A",
+          "sku": "EV285-BEI-A",
+          "price": "419.00",
+          "inventory_quantity": 10,
+          "barcode": "1940000000010",
+          "weight": 0.68,
+          "weight_unit": "lb"
+        }
+      ],
+      "inventory_locations": [
+        {
+          "location_id": "WH-A",
+          "name": "Warehouse A",
+          "country": "USA",
+          "quantity": 28
+        },
+        {
+          "location_id": "WH-B",
+          "name": "Warehouse B",
+          "country": "USA",
+          "quantity": 15
+        },
+        {
+          "location_id": "STORE-NYC",
+          "name": "NYC Flagship",
+          "country": "USA",
+          "quantity": 7
+        }
+      ],
+      "shipping_details": {
+        "requires_shipping": true,
+        "weight": 310,
+        "weight_unit": "g",
+        "dimensions": {
+          "length": 24,
+          "width": 20,
+          "height": 10,
+          "unit": "cm"
+        },
+        "shipping_methods": [
+          {
+            "method": "Standard Shipping",
+            "estimated_days": "5-7",
+            "cost": "9.99"
+          },
+          {
+            "method": "Express Shipping",
+            "estimated_days": "1-2",
+            "cost": "24.99"
+          }
+        ]
+      },
+      "media": [
+        {
+          "id": 201000013,
+          "type": "image",
+          "alt": "Front View",
+          "url": "https://cdn.shopify.com/images/jabra-evolve2-85-black.jpg"
+        },
+        {
+          "id": 201000014,
+          "type": "image",
+          "alt": "On Head",
+          "url": "https://cdn.shopify.com/images/jabra-evolve2-85-wear.jpg"
+        },
+        {
+          "id": 201000015,
+          "type": "video",
+          "alt": "Call Demo",
+          "url": "https://cdn.shopify.com/videos/jabra-evolve2-85-demo.mp4"
+        }
+      ],
+      "seo": {
+        "title": "Jabra Evolve2 85 Professional Wireless Headset",
+        "description": "Shop Jabra Evolve2 85 with 8-mic call technology and ANC for professional use.",
+        "keywords": [
+          "jabra headset",
+          "professional headset",
+          "evolve2 85",
+          "office headset"
+        ]
+      },
+      "reviews": [
+        {
+          "review_id": 5011,
+          "customer_name": "Mark Davis",
+          "rating": 5,
+          "title": "Best headset for remote work",
+          "comment": "Call quality is phenomenal. Colleagues say I sound crystal clear.",
+          "date": "2026-02-06"
+        },
+        {
+          "review_id": 5012,
+          "customer_name": "Jennifer Lee",
+          "rating": 5,
+          "title": "Worth the premium price",
+          "comment": "ANC and mic quality justify every dollar.",
+          "date": "2026-02-10"
+        },
+        {
+          "review_id": 5013,
+          "customer_name": "Robert Brown",
+          "rating": 4,
+          "title": "Great for calls",
+          "comment": "Heavy for long wear but call quality is unmatched.",
+          "date": "2026-02-17"
+        }
+      ],
+      "analytics": {
+        "views_last_30_days": 6700,
+        "purchases_last_30_days": 310,
+        "conversion_rate": 4.6,
+        "wishlist_count": 450
+      },
+      "compliance": {
+        "certifications": [
+          "FCC",
+          "CE",
+          "RoHS",
+          "UC"
+        ],
+        "battery_safety": "UN38.3 certified",
+        "recycling_program": true
+      }
+    }
+  ]
+}

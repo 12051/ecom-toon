@@ -1,7 +1,6 @@
 # ecom-toon: JSON → TOON Converter
 
-Convert eCommerce JSON to TOON format directly inside VS Code.
-Save **38–49% LLM tokens** on every API call — with zero data loss.
+Convert eCommerce JSON to TOON format — save 38-44% LLM tokens with zero data loss. Right-click any .json file to convert instantly.
 
 ## Features
 
@@ -12,23 +11,12 @@ Save **38–49% LLM tokens** on every API call — with zero data loss.
 - ✅ **Roundtrip validation** — prove zero data loss
 - ✅ Status bar button — convert with one click
 
-## Requirements
-
-1. **Python 3.10+** installed on your system
-2. The **ecom-toon project** cloned/downloaded on your machine
-3. Dependencies installed: `poetry install` or `pip install tiktoken rich`
-
 ## Setup (First Time)
 
 1. Install this extension
-2. Open VS Code Settings (`Ctrl+,`)
+2. Open VS Code Settings (`Ctrl+Shift+X`)
 3. Search for `ecom-toon`
-4. Set **`ecom-toon.cliPath`** to your project folder path:
-   - Windows: `C:\Users\YourName\ecom-toon-project`
-   - Mac/Linux: `/home/yourname/ecom-toon-project`
-5. Set **`ecom-toon.pythonPath`** if needed (default: `python`)
-   - If `python` doesn't work, try `python3`
-   - Or use the full path: `C:\Python311\python.exe`
+4. Install
 
 ## How to Use
 
@@ -57,15 +45,6 @@ Save **38–49% LLM tokens** on every API call — with zero data loss.
 1. Right-click any `.json` file
 2. Click **"ecom-toon: Validate Roundtrip"**
 3. Confirms JSON → TOON → JSON produces identical output
-
-## Settings
-
-| Setting | Default | Description |
-|---|---|---|
-| `ecom-toon.pythonPath` | `python` | Path to Python executable |
-| `ecom-toon.cliPath` | *(auto)* | Path to your ecom-toon project folder |
-| `ecom-toon.showSavingsOnConvert` | `true` | Show token savings after conversion |
-| `ecom-toon.outputFolder` | *(same folder)* | Where to save converted files |
 
 ## What is TOON?
 
@@ -101,9 +80,10 @@ variants[1]{id,sku,price},
 
 | Catalog | JSON tokens | TOON tokens | Savings |
 |---|---|---|---|
-| 1 product | 1,927 | 1,184 | 38.6% |
-| 5 products | 7,020 | 4,312 | 38.6% |
-| 141 products (1MB) | 336,810 | 219,522 | 34.8% |
+| 1 product | 551 | 346 | 37.2% |
+| 3 products | 1,457 | 992 | 31.9% |
+| 141 products | 214,403 | 124,969 | 41.7% |
+| 500 products | 1,471,066 | 811,907 | 44.8% |
 
 ## License
 

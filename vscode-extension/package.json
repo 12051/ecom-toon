@@ -1,8 +1,8 @@
 {
   "name": "ecom-toon",
   "displayName": "ecom-toon: JSON → TOON Converter",
-  "description": "Convert eCommerce JSON to TOON format for LLM token savings (38-49% fewer tokens)",
-  "version": "1.0.0",
+  "description": "Convert eCommerce JSON to TOON format — save 38-44% LLM tokens with zero data loss. Right-click any .json file to convert instantly.",
+  "version": "1.0.2",
   "publisher": "midhu27",
   "engines": {
     "vscode": "^1.85.0"
@@ -18,7 +18,9 @@
     "llm",
     "token",
     "shopify",
-    "converter"
+    "converter",
+    "bigcommerce", 
+    "cost reduction"
   ],
   "icon": "media/icon.png",
   "galleryBanner": {
@@ -133,6 +135,7 @@
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.3.0"

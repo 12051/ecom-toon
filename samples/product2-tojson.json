@@ -1,0 +1,139 @@
+{
+  "id": 329678821,
+  "title": "Premium Waterproof Rain Coat",
+  "handle": "premium-waterproof-rain-coat",
+  "description": "Heavy-duty waterproof rain coat with taped seams, adjustable hood, and multiple pockets. Perfect for outdoor adventures.",
+  "body_html": "<p>Heavy-duty waterproof rain coat with taped seams, adjustable hood, and multiple pockets. Perfect for outdoor adventures. Available in multiple sizes and colors.</p>",
+  "vendor": "OutdoorGear Pro",
+  "product_type": "Coat",
+  "created_at": "2026-01-15T10:30:00Z",
+  "published_at": "2026-01-16T09:00:00Z",
+  "tags": [
+    "raincoat",
+    "waterproof",
+    "outdoor",
+    "spring",
+    "winter"
+  ],
+  "price": "129.00",
+  "price_min": "129.00",
+  "price_max": "149.00",
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": "159.00",
+  "options": [
+    {
+      "id": 1,
+      "product_id": 329678821,
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Small",
+        "Medium",
+        "Large",
+        "X-Large"
+      ]
+    },
+    {
+      "id": 2,
+      "product_id": 329678821,
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black",
+        "Navy",
+        "Green"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 794864229,
+      "title": "Small / Black",
+      "option1": "Small",
+      "option2": "Black",
+      "sku": "RC-S-BLK",
+      "price": "129.00",
+      "compare_at_price": "159.00",
+      "weight": 1200,
+      "available": true,
+      "inventory_quantity": 25,
+      "requires_shipping": true,
+      "taxable": true,
+      "barcode": "123456789012"
+    },
+    {
+      "id": 794864233,
+      "title": "Medium / Navy",
+      "option1": "Medium",
+      "option2": "Navy",
+      "sku": "RC-M-NVY",
+      "price": "139.00",
+      "compare_at_price": null,
+      "weight": 1300,
+      "available": true,
+      "inventory_quantity": 15,
+      "requires_shipping": true,
+      "taxable": true,
+      "barcode": "123456789036"
+    },
+    {
+      "id": 794864237,
+      "title": "Large / Green",
+      "option1": "Large",
+      "option2": "Green",
+      "sku": "RC-L-GRN",
+      "price": "149.00",
+      "compare_at_price": "169.00",
+      "weight": 1400,
+      "available": false,
+      "inventory_quantity": 0,
+      "requires_shipping": true,
+      "taxable": true,
+      "barcode": "123456789040"
+    },
+    {
+      "id": 794864241,
+      "title": "X-Large / Black",
+      "option1": "X-Large",
+      "option2": "Black",
+      "sku": "RC-XL-BLK",
+      "price": "149.00",
+      "compare_at_price": null,
+      "weight": 1500,
+      "available": true,
+      "inventory_quantity": 8,
+      "requires_shipping": true,
+      "taxable": true,
+      "barcode": "123456789064"
+    }
+  ],
+  "images": [
+    {
+      "id": 850703873,
+      "product_id": 329678821,
+      "src": "https://cdn.shopify.com/s/files/1/0040/7092/products/rain-coat-front.jpg?v=1674123456",
+      "alt": "Premium Waterproof Rain Coat - Front View Black"
+    },
+    {
+      "id": 850703877,
+      "product_id": 329678821,
+      "src": "https://cdn.shopify.com/s/files/1/0040/7092/products/rain-coat-side.jpg?v=1674123456",
+      "alt": "Premium Waterproof Rain Coat - Side View"
+    },
+    {
+      "id": 850703881,
+      "product_id": 329678821,
+      "src": "https://cdn.shopify.com/s/files/1/0040/7092/products/rain-coat-back.jpg?v=1674123456",
+      "alt": "Premium Waterproof Rain Coat - Back View Green"
+    }
+  ],
+  "featured_image": "https://cdn.shopify.com/s/files/1/0040/7092/products/rain-coat-front.jpg?v=1674123456",
+  "metafields": [
+    {
+      "key": "care_instructions",
+      "value": "Machine wash cold, tumble dry low",
+      "namespace": "custom"
+    }
+  ]
+}

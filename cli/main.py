@@ -1,6 +1,19 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """ecom-toon CLI - Production Ready"""
 import json
+import sys
+import io
+
+# Fix Windows terminal Unicode encoding (handles ✅ ❌ 📊 emojis)
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(
+        sys.stdout.buffer, encoding='utf-8', errors='replace'
+    )
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(
+        sys.stderr.buffer, encoding='utf-8', errors='replace'
+    )
 import argparse
 import glob
 import csv
@@ -302,7 +315,7 @@ def do_convert(input_file: Path, output_file: Path,
     toon_text = to_toon(data)
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_file.write_text(toon_text, encoding="utf-8")
-    print(f"✅ Converted {input_file} → {output_file}")
+    print(f"[OK] Converted {input_file} → {output_file}")
 
 
 def _convert_one_json(json_path: Path, out_dir: Optional[Path]) -> dict:
@@ -581,7 +594,7 @@ def do_decompress(gzip_path: Path, output_path: Path) -> None:
     toon_text = decompress_gzip_to_toon(gzip_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(toon_text, encoding="utf-8")
-    print(f"✅ Decompressed {gzip_path} → {output_path}")
+    print(f"[OK] Decompressed {gzip_path} → {output_path}")
 
 
 def do_compress_json(json_path: Path, output_path: Optional[Path]) -> None:
